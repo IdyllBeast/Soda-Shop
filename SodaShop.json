@@ -1,0 +1,17 @@
+{
+	"id": "SodaShop",
+	"name": "Soda Shop",
+	"display_name": "Soda Shop",
+	"author": ["IdyllBeast", "credit to Bill Cipher"],
+	"description": "A Dr Pepper themed mod",
+	"prefix": "soda",
+	"main_file": "SodaShop.lua",
+	"priority": 0,
+	"badge_colour": "6b2014",
+	"badge_text_colour": "887f85",
+	"version": "0.2",
+	"dependencies": [
+		"Talisman",
+		"Cryptid"
+	]
+}
