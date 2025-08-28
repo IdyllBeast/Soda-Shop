@@ -12,6 +12,7 @@ SMODS.Atlas({
 	py = 95,
 })
 
+--Dr Pepper
 SMODS.Joker({
 	key = "drpepper",
 	loc_txt = {
@@ -73,6 +74,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Big Red
 SMODS.Joker({
 	key = "bigred",
 	loc_txt = {
@@ -117,6 +119,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Faygo
 SMODS.Joker({
 	key = "faygo",
 	loc_txt = {
@@ -194,6 +197,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Dr Thunder
 SMODS.Joker({
 	key = "drthunder",
 	loc_txt = {
@@ -254,6 +258,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Derpy Soda Pop
 SMODS.Joker({
 	key = "derpysodapop",
 	loc_txt = {
@@ -300,6 +305,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Red Bull
 SMODS.Joker({
 	key = "redbull",
 	loc_txt = {
@@ -388,6 +394,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Orange Crush
 SMODS.Joker({
 	key = "orangecrush",
 	loc_txt = {
@@ -456,6 +463,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Grape Soda
 SMODS.Joker({
 	key = "grapesoda",
 	loc_txt = {
@@ -528,6 +536,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Ramune
 SMODS.Joker({
 	key = "ramune",
 	loc_txt = {
@@ -616,6 +625,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Barq's Root Beer
 SMODS.Joker({
 	key = "barqsrootbeer",
 	loc_txt = {
@@ -700,6 +710,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Surge
 SMODS.Joker({
 	key = "surge",
 	loc_txt = {
@@ -742,6 +753,7 @@ SMODS.Joker({
 	end,
 })
 
+-- A&W Cream Soda
 SMODS.Joker({
 	key = "creamsoda",
 	loc_txt = {
@@ -783,6 +795,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Baja Blast
 SMODS.Joker({
 	key = "baja_blast",
 	loc_txt = {
@@ -868,6 +881,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Pepsi
 SMODS.Joker({
 	key = "pepsi",
 	loc_txt = {
@@ -920,6 +934,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Coca Cola
 SMODS.Joker({
 	key = "coca_cola",
 	loc_txt = {
@@ -972,6 +987,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Crystal Pepsi
 SMODS.Joker({
 	key = "crystal_pepsi",
 	loc_txt = {
@@ -1023,6 +1039,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Pepsi Blue
 SMODS.Joker({
 	key = "pepsi_blue",
 	loc_txt = {
@@ -1101,6 +1118,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Sprite
 SMODS.Joker({
 	key = "sprite",
 	loc_txt = {
@@ -1163,6 +1181,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Mountain Dew
 SMODS.Joker({
 	key = "mountain_dew",
 	loc_txt = {
@@ -1237,6 +1256,7 @@ SMODS.Joker({
 })
 
 -- Code Red
+-- Code Red
 SMODS.Joker({
 	key = "code_red",
 	loc_txt = {
@@ -1289,6 +1309,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Silver Bullet
 SMODS.Joker({
 	key = "silver_bullet",
 	loc_txt = {
@@ -1390,6 +1411,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Cactus Cooler
 -- Cactus Cooler
 SMODS.Joker({
 	key = "cactus_cooler",
@@ -1509,6 +1531,7 @@ SMODS.Joker({
 })
 
 -- Diet Coke
+-- Diet Coke
 SMODS.Joker({
 	key = "diet_coke",
 	loc_txt = {
@@ -1548,6 +1571,7 @@ SMODS.Joker({
 	end,
 })
 
+-- 7UP
 -- 7UP
 SMODS.Joker({
 	key = "seven_up",
@@ -1630,6 +1654,7 @@ SMODS.Joker({
 })
 
 -- Squirt
+-- Squirt
 SMODS.Joker({
 	key = "squirt",
 	loc_txt = {
@@ -1699,6 +1724,7 @@ SMODS.Joker({
 })
 
 -- Coke Zero
+-- Coke Zero
 SMODS.Joker({
 	key = "coke_zero",
 	loc_txt = {
@@ -1766,6 +1792,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Canned Underwear
 -- Canned Underwear
 SMODS.Joker({
 	key = "canned_underwear",
@@ -1867,6 +1894,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Slurm
 SMODS.Joker({
 	key = "slurm",
 	loc_txt = {
@@ -1996,6 +2024,7 @@ SMODS.Joker({
 	end,
 })
 
+-- Unseen Explosion
 SMODS.Joker({
 	key = "unseen_explosion",
 	loc_txt = {
@@ -2112,13 +2141,16 @@ function Game.init_game_object(self)
 	return game_object
 end
 
+-- Canned Strawberry Shortcake
 SMODS.Joker({
 	key = "canned_strawberry_shortcake",
 	loc_txt = {
 		name = "Canned Strawberry Shortcake",
 		text = {
-			"Gains {C:chips}+#1#{} Chips for each",
-			"hand played this blind {C:inactive}(Currently: #2#){}",
+			"{C:attention}Dessert Special:{}",
+			"On {C:attention}final hand{} of blind,",
+			"earn {C:money}$2{} per hand played",
+			"this blind {C:inactive}(Currently: #1#){}",
 		},
 	},
 	atlas = "test",
@@ -2137,38 +2169,34 @@ SMODS.Joker({
 		return { vars = { hands_played } }
 	end,
 	calculate = function(self, card, context)
-		-- Check if this is the final hand (blind is about to be defeated)
-		if context.joker_main and context.scoring_hand then
-			local current_chips = to_big(G.GAME.chips)
-			local blind_chips = to_big(G.GAME.blind.chips)
+		-- Check if this is the final hand (hands_left == 0)
+		if context.joker_main and G.GAME.current_round.hands_left == 0 then
+			local hands_played = G.GAME.current_round.hands_played or 0
 
-			-- If this hand will defeat the blind (current chips >= blind requirement)
-			if current_chips >= blind_chips then
-				local hands_played = G.GAME.current_round.hands_played or 0
+			if hands_played > 0 then
+				-- Give $2 per hand played this blind
+				local money_reward = hands_played * 2
+				ease_dollars(money_reward)
 
-				if hands_played > 0 then
-					-- Give money based on hands played this blind
-					ease_dollars(hands_played)
-
-					return {
-						message = "Dessert Special! $" .. hands_played,
-						dollars = hands_played,
-						colour = G.C.MONEY,
-					}
-				end
+				return {
+					message = "Dessert Special! $" .. money_reward,
+					dollars = money_reward,
+					colour = G.C.MONEY,
+				}
 			end
 		end
 	end,
 })
 
+-- Canned Corn Soup
 SMODS.Joker({
 	key = "canned_corn_soup",
 	loc_txt = {
 		name = "Canned Corn Soup",
 		text = {
-			"Gains {C:mult}+#1#{} Mult for each",
-			"${C:money}1{} in your current money",
-			"Currently: {C:mult}+#2#{} Mult",
+			"{C:mult}+Mult{} based on",
+			"your current {C:money}money{}.",
+			"Currently: {C:mult}+#1#{} Mult",
 		},
 	},
 	atlas = "test",
@@ -2183,7 +2211,8 @@ SMODS.Joker({
 	discovered = true,
 	config = { extra = {} },
 	loc_vars = function(self, info_queue, center)
-		local money = G.GAME.dollars or 0
+		-- Convert big number to regular number for comparison
+		local money = to_number(G.GAME.dollars) or 0
 		local mult_bonus = 0
 
 		-- Calculate mult based on money
@@ -2211,7 +2240,8 @@ SMODS.Joker({
 	end,
 	calculate = function(self, card, context)
 		if context.joker_main then
-			local money = G.GAME.dollars or 0
+			-- Convert big number to regular number for comparison
+			local money = to_number(G.GAME.dollars) or 0
 			local mult_bonus = 0
 
 			-- Calculate mult based on current money
@@ -2244,14 +2274,15 @@ SMODS.Joker({
 		end
 	end,
 })
-
+-- Rerollercoaster Tycoon
 SMODS.Joker({
 	key = "rerollercoaster_tycoon",
 	loc_txt = {
 		name = "Rerollercoaster Tycoon",
 		text = {
-			"Gain {C:attention}#1#{} free reroll{}",
-			"{C:inactive}Currently: {C:attention}#2#{C:inactive} free rerolls",
+			"{C:attention}#1#{} free {C:green}Reroll",
+			"per shop",
+			"{C:inactive}(Currently {C:green}#2#{C:inactive} free rerolls){}",
 		},
 	},
 	atlas = "test",
@@ -2264,9 +2295,9 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	config = { extra = { free_rerolls = 0 } },
-	loc_vars = function(self, info_queue, center)
-		return { vars = { center.ability.extra.free_rerolls or 0 } }
+	config = { extra = { rerolls = 1, free_rerolls = 0 } },
+	loc_vars = function(self, info_queue, card)
+		return { vars = { card.ability.extra.rerolls or 1, card.ability.extra.free_rerolls or 0 } }
 	end,
 	calculate = function(self, card, context)
 		-- Add a free reroll at the start of each round
@@ -2357,3 +2388,75 @@ G.FUNCS.reroll_shop = function(e)
 		original_reroll_shop(e)
 	end
 end
+
+--Memento
+SMODS.Joker({
+	key = "memento",
+	loc_txt = {
+		name = "Memento",
+		text = {
+			"{C:attention}Sell{} to remember",
+			"when {C:attention}bought{}",
+		},
+	},
+	atlas = "test",
+	pos = { x = 0, y = 0 },
+	order = 9,
+	cost = 12,
+	rarity = 3, -- Legendary
+	blueprint_compat = false,
+	eternal_compat = false, -- Can't be eternal since selling is the mechanic
+	perishable_compat = false, -- Too powerful for perishable
+	unlocked = true,
+	discovered = true,
+	config = { extra = { has_saved = false } },
+	loc_vars = function(self, info_queue, center)
+		local has_saved = center.ability.extra.has_saved
+		return { vars = { has_saved and "State Saved" or "No Save" } }
+	end,
+	add_to_deck = function(self, card, from_debuff)
+		-- Save state when bought/added to deck
+		if G.STAGE == G.STAGES.RUN then
+			-- Save current run state (same as DebugPlus)
+			save_run()
+			compress_and_save(G.SETTINGS.profile .. "/" .. "memento_save.jkr", G.ARGS.save_run)
+
+			card.ability.extra.has_saved = true
+
+			-- Show confirmation message
+			card_eval_status_text(card, "extra", nil, nil, nil, {
+				message = "State Remembered!",
+				colour = G.C.FILTER,
+			})
+		end
+	end,
+	remove_from_deck = function(self, card, from_debuff)
+		-- Restore state when sold/removed from deck
+		if card.ability.extra.has_saved and G.STAGE == G.STAGES.RUN then
+			-- Load the saved state (same as DebugPlus)
+			G:delete_run()
+			G.SAVED_GAME = get_compressed(G.SETTINGS.profile .. "/" .. "memento_save.jkr")
+			if G.SAVED_GAME ~= nil then
+				G.SAVED_GAME = STR_UNPACK(G.SAVED_GAME)
+			end
+
+			-- Show message before reverting
+			card_eval_status_text(card, "extra", nil, nil, nil, {
+				message = "Reverting to Memory...",
+				colour = G.C.RED,
+			})
+
+			-- Small delay then restart with saved state
+			G.E_MANAGER:add_event(Event({
+				trigger = "after",
+				delay = 1.0,
+				func = function()
+					G:start_run({
+						savetext = G.SAVED_GAME,
+					})
+					return true
+				end,
+			}))
+		end
+	end,
+})
