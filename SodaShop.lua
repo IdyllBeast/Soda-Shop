@@ -124,13 +124,7 @@ SMODS.Joker({
 			"{s:0.8}Resets at end of round",
 		},
 	},
-	config = {
-		extra = {
-			odds = 2,
-			add_hand_size = 1,
-			current_add = 0,
-		},
-	},
+	config = { extra = { odds = 2, add_hand_size = 1, current_add = 0 } },
 	pos = { x = 1, y = 2 },
 	order = 18,
 	cost = 8,
