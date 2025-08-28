@@ -23,5 +23,5 @@ Each Joker is inspired by a different soda, with unique mechanics that bubble up
 1. Install [Steamodded](https://github.com/Steamodded/smods) for Balatro.  
 2. Download or clone this repo into your `Mods/` folder.  
    ```sh
-   git clone https://github.com/TheNameIsEaston/sodashop.git
+   git clone https://github.com/IdyllBeast/sodashop.git
 3. Launch Balatro and enjoy a cold one. 🍹
