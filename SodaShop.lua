@@ -85,13 +85,18 @@ SMODS.Joker({
 		},
 	},
 	atlas = "SodaShop",
-	blueprint_compat = true,
-	perishable_compat = false,
-	rarity = 1,
-	cost = 6,
 	pos = { x = 2, y = 0 },
 	order = 5,
-	config = { extra = { mult_gain = 4, mult = 0 } },
+	cost = 6,
+	rarity = 1,
+	blueprint_compat = true,
+	perishable_compat = false,
+	config = {
+		extra = {
+			mult_gain = 4,
+			mult = 0,
+		},
+	},
 
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.mult_gain, card.ability.extra.mult } }
@@ -124,7 +129,7 @@ SMODS.Joker({
 			"{s:0.8}Resets at end of round",
 		},
 	},
-	config = { extra = { odds = 2, add_hand_size = 1, current_add = 0 } },
+	atlas = "SodaShop",
 	pos = { x = 1, y = 2 },
 	order = 18,
 	cost = 8,
@@ -134,7 +139,13 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = {
+		extra = {
+			odds = 2,
+			add_hand_size = 1,
+			current_add = 0,
+		},
+	},
 
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.odds, card.ability.extra.add_hand_size, card.ability.extra.current_add } }
@@ -194,7 +205,7 @@ SMODS.Joker({
 			"{C:inactive}(Currently {C:attention}#1#{C:inactive} retriggers)",
 		},
 	},
-	config = { extra = { retriggers = 0 } },
+	atlas = "SodaShop",
 	pos = { x = 5, y = 1 },
 	order = 17,
 	cost = 8,
@@ -204,7 +215,11 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = {
+		extra = {
+			retriggers = 0,
+		},
+	},
 
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.retriggers } }
@@ -248,11 +263,7 @@ SMODS.Joker({
 			"each give {X:mult,C:white}X#1#{} Mult when scored",
 		},
 	},
-	config = {
-		extra = {
-			x_mult = 2,
-		},
-	},
+	atlas = "SodaShop",
 	pos = { x = 3, y = 1 },
 	order = 14,
 	cost = 5,
@@ -262,7 +273,11 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = {
+		extra = {
+			x_mult = 2,
+		},
+	},
 
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.x_mult } }
@@ -297,13 +312,7 @@ SMODS.Joker({
 			"{C:inactive}(Free rerolls used: #1#)",
 		},
 	},
-	config = {
-		extra = {
-			purchased_this_shop = false,
-			free_rerolls = 0,
-			owed_cost = 0,
-		},
-	},
+	atlas = "SodaShop",
 	pos = { x = 2, y = 3 },
 	order = 25,
 	cost = 7,
@@ -313,7 +322,13 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = {
+		extra = {
+			purchased_this_shop = false,
+			free_rerolls = 0,
+			owed_cost = 0,
+		},
+	},
 
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.free_rerolls } }
@@ -383,11 +398,7 @@ SMODS.Joker({
 			"{C:attention}Face cards{} are {C:red}debuffed",
 		},
 	},
-	config = {
-		extra = {
-			x_mult = 1.5,
-		},
-	},
+	atlas = "SodaShop",
 	pos = { x = 4, y = 2 },
 	order = 21,
 	cost = 6,
@@ -397,7 +408,11 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = {
+		extra = {
+			x_mult = 1.5,
+		},
+	},
 
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.x_mult } }
@@ -452,12 +467,7 @@ SMODS.Joker({
 			"{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
 		},
 	},
-	config = {
-		extra = {
-			x_mult = 1,
-			first_discard_checked = false,
-		},
-	},
+	atlas = "SodaShop",
 	pos = { x = 2, y = 2 },
 	order = 19,
 	cost = 6,
@@ -467,7 +477,12 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = {
+		extra = {
+			x_mult = 1,
+			first_discard_checked = false,
+		},
+	},
 
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.x_mult } }
@@ -524,13 +539,7 @@ SMODS.Joker({
 			"{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult, Most played: #2#)",
 		},
 	},
-	config = {
-		extra = {
-			mult = 1,
-			most_played_hand = nil,
-			last_hand_played = nil,
-		},
-	},
+	atlas = "SodaShop",
 	pos = { x = 1, y = 3 },
 	order = 24,
 	cost = 7,
@@ -540,7 +549,13 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = {
+		extra = {
+			mult = 1,
+			most_played_hand = nil,
+			last_hand_played = nil,
+		},
+	},
 
 	loc_vars = function(self, info_queue, card)
 		local most_played_hand = "None"
@@ -601,13 +616,18 @@ SMODS.Joker({
 	end,
 })
 
--- Barq's Root Beer
 SMODS.Joker({
-	name = "Barq's Root Beer",
 	key = "barqsrootbeer",
-	config = {
-		extra = {},
+	loc_txt = {
+		name = "Barq's Root Beer",
+		text = {
+			"Create up to {C:attention}2{} random",
+			"{C:tarot}Tarot{} cards if no hands",
+			"remaining at end of round",
+			"{C:inactive}(Must have room)",
+		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 3, y = 3 },
 	order = 4,
 	cost = 5,
@@ -617,16 +637,8 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Barq's Root Beer",
-		text = {
-			"Create up to {C:attention}2{} random",
-			"{C:tarot}Tarot{} cards if no hands",
-			"remaining at end of round",
-			"{C:inactive}(Must have room)",
-		},
+	config = {
+		extra = {},
 	},
 
 	loc_vars = function(self, info_queue, card)
@@ -688,15 +700,16 @@ SMODS.Joker({
 	end,
 })
 
--- Surge
 SMODS.Joker({
-	name = "Surge",
 	key = "surge",
-	config = {
-		extra = {
-			reps = 2,
+	loc_txt = {
+		name = "Surge",
+		text = {
+			"Retrigger all played cards",
+			"{C:attention}#1#{} times during the {C:attention}Boss Blind",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 2, y = 4 },
 	order = 31,
 	cost = 8,
@@ -706,13 +719,9 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Surge",
-		text = {
-			"Retrigger all played cards",
-			"{C:attention}#1#{} times during the {C:attention}Boss Blind",
+	config = {
+		extra = {
+			reps = 2,
 		},
 	},
 
@@ -733,15 +742,16 @@ SMODS.Joker({
 	end,
 })
 
--- A&W Cream Soda
 SMODS.Joker({
-	name = "A&W Cream Soda",
 	key = "creamsoda",
-	config = {
-		extra = {
-			mult = 23,
+	loc_txt = {
+		name = "A&W Cream Soda",
+		text = {
+			"{C:mult}+#1#{} Mult on {C:attention}first",
+			"{C:attention}hand{} of round",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 1, y = 1 },
 	order = 2,
 	cost = 4,
@@ -751,13 +761,9 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "A&W Cream Soda",
-		text = {
-			"{C:mult}+#1#{} Mult on {C:attention}first",
-			"{C:attention}hand{} of round",
+	config = {
+		extra = {
+			mult = 23,
 		},
 	},
 
@@ -777,16 +783,18 @@ SMODS.Joker({
 	end,
 })
 
--- Baja Blast
 SMODS.Joker({
-	name = "Baja Blast",
 	key = "baja_blast",
-	config = {
-		extra = {
-			rounds_remaining = 10,
-			multiplier = 3,
+	loc_txt = {
+		name = "Baja Blast",
+		text = {
+			"After {C:attention}#1#{} rounds,",
+			"sell this card to multiply",
+			"sell values of owned {C:attention}Jokers{}",
+			"by {C:money}X#2#{}",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 1, y = 0 },
 	order = 3,
 	cost = 8,
@@ -796,15 +804,10 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Baja Blast",
-		text = {
-			"After {C:attention}#1#{} rounds,",
-			"sell this card to multiply",
-			"sell values of owned {C:attention}Jokers{}",
-			"by {C:money}X#2#{}",
+	config = {
+		extra = {
+			rounds_remaining = 10,
+			multiplier = 3,
 		},
 	},
 
@@ -865,16 +868,15 @@ SMODS.Joker({
 	end,
 })
 
--- Pepsi
 SMODS.Joker({
-	name = "Pepsi",
 	key = "pepsi",
-	config = {
-		extra = {
-			x_mult = 10,
-			debuff_x_mult = 0.5,
+	loc_txt = {
+		name = "Pepsi",
+		text = {
+			"{X:mult,C:white}X#1#{} Mult",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 0, y = 3 },
 	order = 22,
 	cost = 7,
@@ -884,12 +886,10 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Pepsi",
-		text = {
-			"{X:mult,C:white}X#1#{} Mult",
+	config = {
+		extra = {
+			x_mult = 10,
+			debuff_x_mult = 0.5,
 		},
 	},
 
@@ -920,16 +920,15 @@ SMODS.Joker({
 	end,
 })
 
--- Coca Cola
 SMODS.Joker({
-	name = "Coca Cola",
 	key = "coca_cola",
-	config = {
-		extra = {
-			x_chips = 30,
-			debuff_x_chips = 0.5,
+	loc_txt = {
+		name = "Coca Cola",
+		text = {
+			"{X:chips,C:white}X#1#{} Chips",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 5, y = 0 },
 	order = 11,
 	cost = 7,
@@ -939,12 +938,10 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Coca Cola",
-		text = {
-			"{X:chips,C:white}X#1#{} Chips",
+	config = {
+		extra = {
+			x_chips = 30,
+			debuff_x_chips = 0.5,
 		},
 	},
 
@@ -975,15 +972,18 @@ SMODS.Joker({
 	end,
 })
 
--- Crystal Pepsi
 SMODS.Joker({
-	name = "Crystal Pepsi",
 	key = "crystal_pepsi",
-	config = {
-		extra = {
-			odds = 23,
+	loc_txt = {
+		name = "Crystal Pepsi",
+		text = {
+			"{C:green}#1# in #2#{} chance to",
+			"permanently gain {C:blue}+1{} hand",
+			"on reroll",
+			"{C:inactive}(They don't get it; they don't see my vision.)",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 2, y = 1 },
 	order = 13,
 	cost = 4,
@@ -993,15 +993,9 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Crystal Pepsi",
-		text = {
-			"{C:green}#1# in #2#{} chance to",
-			"permanently gain {C:blue}+1{} hand",
-			"on reroll",
-			"{C:inactive}(They don't get it; they don't see my vision.)",
+	config = {
+		extra = {
+			odds = 23,
 		},
 	},
 
@@ -1029,18 +1023,17 @@ SMODS.Joker({
 	end,
 })
 
--- Pepsi Blue
 SMODS.Joker({
-	name = "Pepsi Blue",
 	key = "pepsi_blue",
-	config = {
-		extra = {
-			chips = 6,
-			bonus = 1,
-			xchips = 3,
-			type = "High Card",
+	loc_txt = {
+		name = "Pepsi Blue",
+		text = {
+			"{C:chips}+#1#{} Chips per {C:attention}Joker{}",
+			"{C:chips}+#2#{} Chips if played hand is {C:attention}#3#{}",
+			"({C:chips}+#4#{C:inactive} Chips)",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 5, y = 2 },
 	order = 23,
 	cost = 5,
@@ -1050,14 +1043,12 @@ SMODS.Joker({
 	perishable_compat = false,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Pepsi Blue",
-		text = {
-			"{C:chips}+#1#{} Chips per {C:attention}Joker{}",
-			"{C:chips}+#2#{} Chips if played hand is {C:attention}#3#{}",
-			"({C:chips}+#4#{C:inactive} Chips)",
+	config = {
+		extra = {
+			chips = 6,
+			bonus = 1,
+			xchips = 3,
+			type = "High Card",
 		},
 	},
 
@@ -1110,16 +1101,17 @@ SMODS.Joker({
 	end,
 })
 
--- Sprite
 SMODS.Joker({
-	name = "Sprite",
 	key = "sprite",
-	config = {
-		extra = {
-			x_mult = 1,
-			x_mult_gain = 1,
+	loc_txt = {
+		name = "Sprite",
+		text = {
+			"This Joker gains {X:mult,C:white}X#2#{} Mult",
+			"when a {C:attention}face{} card is added to deck",
+			"{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 0, y = 4 },
 	order = 29,
 	cost = 6,
@@ -1129,14 +1121,10 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Sprite",
-		text = {
-			"This Joker gains {X:mult,C:white}X#2#{} Mult",
-			"when a {C:attention}face{} card is added to deck",
-			"{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
+	config = {
+		extra = {
+			x_mult = 1,
+			x_mult_gain = 1,
 		},
 	},
 
@@ -1175,16 +1163,18 @@ SMODS.Joker({
 	end,
 })
 
--- Mountain Dew
 SMODS.Joker({
-	name = "Mountain Dew",
 	key = "mountain_dew",
-	config = {
-		extra = {
-			chips = 0,
-			stored_chips = 0,
+	loc_txt = {
+		name = "Mountain Dew",
+		text = {
+			"{C:chips}+#1#{} Chips",
+			"Equal to twice the chips",
+			"from first hand of",
+			"previous {C:attention}Ante{}",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 3, y = 2 },
 	order = 20,
 	cost = 5,
@@ -1194,15 +1184,10 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Mountain Dew",
-		text = {
-			"{C:chips}+#1#{} Chips",
-			"Equal to twice the chips",
-			"from first hand of",
-			"previous {C:attention}Ante{}",
+	config = {
+		extra = {
+			chips = 0,
+			stored_chips = 0,
 		},
 	},
 
@@ -1253,11 +1238,15 @@ SMODS.Joker({
 
 -- Code Red
 SMODS.Joker({
-	name = "Code Red",
 	key = "code_red",
-	config = {
-		extra = {},
+	loc_txt = {
+		name = "Code Red",
+		text = {
+			"All {C:attention}suits{}",
+			"considered {C:hearts}Hearts{}",
+		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 4, y = 0 },
 	order = 10,
 	cost = 6,
@@ -1267,14 +1256,8 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Code Red",
-		text = {
-			"All {C:attention}suits{} are",
-			"considered {C:hearts}Hearts{}",
-		},
+	config = {
+		extra = {},
 	},
 
 	loc_vars = function(self, info_queue, card)
@@ -1306,24 +1289,8 @@ SMODS.Joker({
 	end,
 })
 
--- Silver Bullet
 SMODS.Joker({
-	name = "Silver Bullet",
 	key = "silver_bullet",
-	config = {
-		extra = {},
-	},
-	pos = { x = 4, y = 3 },
-	order = 27,
-	cost = 4,
-	rarity = 1,
-	blueprint_compat = false,
-	eternal_compat = false,
-	perishable_compat = true,
-	unlocked = true,
-	discovered = true,
-	atlas = "SodaShop",
-
 	loc_txt = {
 		name = "Silver Bullet",
 		text = {
@@ -1333,6 +1300,16 @@ SMODS.Joker({
 			"{C:inactive}(It must not be cold enough){}",
 		},
 	},
+	atlas = "SodaShop",
+	pos = { x = 4, y = 3 },
+	order = 27,
+	cost = 4,
+	rarity = 1,
+	blueprint_compat = false,
+	eternal_compat = false,
+	perishable_compat = true,
+	unlocked = true,
+	discovered = true,
 
 	loc_vars = function(self, info_queue, card)
 		local main_end = nil
@@ -1415,13 +1392,16 @@ SMODS.Joker({
 
 -- Cactus Cooler
 SMODS.Joker({
-	name = "Cactus Cooler",
 	key = "cactus_cooler",
-	config = {
-		extra = {
-			increase = 2,
+	loc_txt = {
+		name = "Cactus Cooler",
+		text = {
+			"At end of round, increase",
+			"sell value of Joker to the right",
+			"by {C:money}X#1#{}",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 3, y = 0 },
 	order = 6,
 	cost = 10,
@@ -1431,14 +1411,9 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Cactus Cooler",
-		text = {
-			"At end of round, increase",
-			"sell value of Joker to the right",
-			"by {C:money}X#1#{}",
+	config = {
+		extra = {
+			increase = 2,
 		},
 	},
 
@@ -1535,13 +1510,14 @@ SMODS.Joker({
 
 -- Diet Coke
 SMODS.Joker({
-	name = "Diet Coke",
 	key = "diet_coke",
-	config = {
-		extra = {
-			chips = 30,
+	loc_txt = {
+		name = "Diet Coke",
+		text = {
+			"{C:chips}+#1#{} Chips",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 4, y = 1 },
 	order = 15,
 	cost = 4,
@@ -1551,12 +1527,9 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Diet Coke",
-		text = {
-			"{C:chips}+#1#{} Chips",
+	config = {
+		extra = {
+			chips = 30,
 		},
 	},
 
@@ -1577,14 +1550,17 @@ SMODS.Joker({
 
 -- 7UP
 SMODS.Joker({
-	name = "7UP",
 	key = "seven_up",
-	config = {
-		extra = {
-			mult = 0,
-			mult_gain = 10,
+	loc_txt = {
+		name = "7UP",
+		text = {
+			"{C:mult}+#1#{} Mult",
+			"{C:mult}+#2#{} Mult per {C:attention}7{} scored",
+			"{C:attention}7s{} score twice",
+			"{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 0, y = 0 },
 	order = 1,
 	cost = 6,
@@ -1594,15 +1570,10 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "7UP",
-		text = {
-			"{C:mult}+#1#{} Mult",
-			"{C:mult}+#2#{} Mult per {C:attention}7{} scored",
-			"{C:attention}7s{} score twice",
-			"{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+	config = {
+		extra = {
+			mult = 0,
+			mult_gain = 10,
 		},
 	},
 
@@ -1660,13 +1631,17 @@ SMODS.Joker({
 
 -- Squirt
 SMODS.Joker({
-	name = "Squirt",
 	key = "squirt",
-	config = {
-		extra = {
-			x_chips = 1,
+	loc_txt = {
+		name = "Squirt",
+		text = {
+			"{X:chips,C:white}X#1#{} Chips",
+			"At end of blind, if score is",
+			"greater than {C:attention}2X{} blind requirement,",
+			"gain {X:chips,C:white}X2{} Chips permanently",
 		},
 	},
+	atlas = "SodaShop",
 	pos = { x = 1, y = 4 },
 	order = 30,
 	cost = 7,
@@ -1676,15 +1651,9 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
-
-	loc_txt = {
-		name = "Squirt",
-		text = {
-			"{X:chips,C:white}X#1#{} Chips",
-			"At end of blind, if score is",
-			"greater than {C:attention}2X{} blind requirement,",
-			"gain {X:chips,C:white}X2{} Chips permanently",
+	config = {
+		extra = {
+			x_chips = 1,
 		},
 	},
 
@@ -1740,7 +1709,7 @@ SMODS.Joker({
 			"random {C:attention}Joker{} you own",
 		},
 	},
-	config = { extra = {} },
+	atlas = "SodaShop",
 	pos = { x = 0, y = 1 },
 	order = 12,
 	cost = 8,
@@ -1750,7 +1719,7 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = { extra = {} },
 
 	loc_vars = function(self, info_queue, card)
 		return { vars = {} }
@@ -1808,7 +1777,7 @@ SMODS.Joker({
 			"{C:inactive}(Chips : Mult){}",
 		},
 	},
-	config = { extra = {} },
+	atlas = "SodaShop",
 	pos = { x = 3, y = 4 },
 	order = 9,
 	cost = 12,
@@ -1818,7 +1787,7 @@ SMODS.Joker({
 	perishable_compat = true,
 	unlocked = true,
 	discovered = true,
-	atlas = "SodaShop",
+	config = { extra = {} },
 
 	-- Safely compute left/right counts (works even when G.jokers is not available)
 	_count_neighbors = function(self, card)
@@ -1909,13 +1878,15 @@ SMODS.Joker({
 			"{C:inactive}(Stage #3#){}",
 		},
 	},
-	config = { extra = { rounds_held = 0, stage = 1, reset_flag = false } },
-	rarity = 2, -- Uncommon
-	cost = 7,
 	atlas = "SodaShop",
 	pos = { x = 4, y = 4 },
 	order = 28,
+	cost = 7,
+	rarity = 2, -- Uncommon
 	blueprint_compat = false, -- Incompatible with blueprint/brainstorm
+	perishable_compat = true,
+	eternal_compat = true,
+	config = { extra = { rounds_held = 0, stage = 1, reset_flag = false } },
 	loc_vars = function(self, info_queue, center)
 		local stage = (center and center.ability and center.ability.extra and center.ability.extra.stage) or 1
 		local mult_value = 3
@@ -2036,13 +2007,17 @@ SMODS.Joker({
 			"{X:mult,C:white}X2{} Mult",
 		},
 	},
-	config = { extra = { Xmult = 2 } },
-	rarity = 3, -- We'll override the shop appearance logic
-	cost = 8,
-	blueprint_compat = true,
-	pos = { x = 0, y = 0 }, -- You'll need to set proper sprite coordinates
-	order = 32,
 	atlas = "test",
+	pos = { x = 0, y = 0 },
+	order = 32,
+	cost = 8,
+	rarity = 3,
+	blueprint_compat = true,
+	perishable_compat = true,
+	eternal_compat = true,
+	unlocked = true,
+	discovered = true,
+	config = { extra = { Xmult = 2 } },
 	calculate = function(self, card, context)
 		local ret = {}
 
@@ -2142,18 +2117,21 @@ SMODS.Joker({
 	loc_txt = {
 		name = "Canned Strawberry Shortcake",
 		text = {
-			"On {C:attention}final hand{} of round,",
-			"earn {C:money}$1{} per hand played",
-			"this blind {C:inactive}(Currently: #1#){}",
+			"Gains {C:chips}+#1#{} Chips for each",
+			"hand played this blind {C:inactive}(Currently: #2#){}",
 		},
 	},
-	config = { extra = {} },
-	rarity = 1, -- Common
-	cost = 5,
-	blueprint_compat = true,
-	pos = { x = 0, y = 0 }, -- You'll need to set proper sprite coordinates
-	order = 8,
 	atlas = "test",
+	pos = { x = 0, y = 0 },
+	order = 8,
+	cost = 5,
+	rarity = 1, -- Common
+	blueprint_compat = true,
+	eternal_compat = true,
+	perishable_compat = true,
+	unlocked = true,
+	discovered = true,
+	config = { extra = {} },
 	loc_vars = function(self, info_queue, center)
 		local hands_played = G.GAME.current_round.hands_played or 0
 		return { vars = { hands_played } }
@@ -2188,18 +2166,22 @@ SMODS.Joker({
 	loc_txt = {
 		name = "Canned Corn Soup",
 		text = {
-			"{C:mult}+Mult{} based on how",
-			"little {C:money}money{} you have",
-			"More comfort when struggling",
-			"Currently: {C:mult}+#1#{} Mult",
+			"Gains {C:mult}+#1#{} Mult for each",
+			"${C:money}1{} in your current money",
+			"Currently: {C:mult}+#2#{} Mult",
 		},
 	},
-	config = { extra = {} },
-	rarity = 1, -- Common
-	cost = 4,
-	pos = { x = 0, y = 0 }, -- You'll need to set proper sprite coordinates
-	order = 7,
 	atlas = "test",
+	pos = { x = 0, y = 0 },
+	order = 7,
+	cost = 4,
+	rarity = 1, -- Common
+	blueprint_compat = true,
+	eternal_compat = true,
+	perishable_compat = true,
+	unlocked = true,
+	discovered = true,
+	config = { extra = {} },
 	loc_vars = function(self, info_queue, center)
 		local money = G.GAME.dollars or 0
 		local mult_bonus = 0
@@ -2268,17 +2250,21 @@ SMODS.Joker({
 	loc_txt = {
 		name = "Rerollercoaster Tycoon",
 		text = {
-			"{C:green}+1{} free reroll per round",
-			"Unused rerolls {C:attention}accumulate{}",
-			"Currently: {C:attention}#1#{} free rerolls",
+			"Gain {C:attention}#1#{} free reroll{}",
+			"{C:inactive}Currently: {C:attention}#2#{C:inactive} free rerolls",
 		},
 	},
-	config = { extra = { free_rerolls = 0 } },
-	rarity = 2, -- Uncommon
-	cost = 6,
-	pos = { x = 0, y = 0 }, -- You'll need to set proper sprite coordinates
-	order = 26,
 	atlas = "test",
+	pos = { x = 0, y = 0 },
+	order = 26,
+	cost = 6,
+	rarity = 2, -- Uncommon
+	blueprint_compat = true,
+	eternal_compat = true,
+	perishable_compat = true,
+	unlocked = true,
+	discovered = true,
+	config = { extra = { free_rerolls = 0 } },
 	loc_vars = function(self, info_queue, center)
 		return { vars = { center.ability.extra.free_rerolls or 0 } }
 	end,
