@@ -12,6 +12,13 @@ SMODS.Atlas({
 	py = 95,
 })
 
+SMODS.Atlas({
+	key = "unseen",
+	path = "UnseenExplosion.png",
+	px = 71,
+	py = 95,
+})
+
 --Dr Pepper
 SMODS.Joker({
 	key = "drpepper",
@@ -2024,7 +2031,7 @@ SMODS.Joker({
 	end,
 })
 
--- Unseen Explosion
+--Unseen Explosion
 SMODS.Joker({
 	key = "unseen_explosion",
 	loc_txt = {
@@ -2047,59 +2054,46 @@ SMODS.Joker({
 	unlocked = true,
 	discovered = true,
 	config = { extra = { Xmult = 2 } },
-	calculate = function(self, card, context)
-		local ret = {}
 
+	-- Core logic: X2 Mult + retrigger copied Jokers
+	calculate = function(self, card, context)
 		-- Apply the X2 mult first
-		if context.joker_main then
+		if context.joker_main and not context.blueprint and not context.brainstorm then
 			return {
 				message = localize({ type = "variable", key = "a_xmult", vars = { card.ability.extra.Xmult } }),
 				Xmult_mod = card.ability.extra.Xmult,
+				repetitions = 1,
 			}
 		end
 
-		-- Copy leftmost joker ability (Blueprint logic)
-		if context.blueprint then
-			context.blueprint_card = context.blueprint_card or card
-			if context.blueprint_card == card then
-				local leftmost_joker = G.jokers.cards[1] -- Get first joker in array
-				if leftmost_joker and leftmost_joker ~= card then
-					context.blueprint_card = leftmost_joker
-					if leftmost_joker.calculate_joker then
-						local other_ret = leftmost_joker:calculate_joker(context)
-						if other_ret then
-							table.insert(ret, other_ret)
-						end
-					end
+		-- Handle Blueprint context (leftmost Joker)
+		if context.blueprint and context.blueprint_card == card then
+			local leftmost_joker = G.jokers.cards[1]
+			if leftmost_joker and leftmost_joker ~= card then
+				-- Chain to the copied Joker
+				context.blueprint_card = leftmost_joker
+				if leftmost_joker.calculate_joker then
+					return leftmost_joker:calculate_joker(context)
 				end
 			end
 		end
 
-		-- Copy right joker ability (Brainstorm logic)
-		if context.brainstorm then
-			context.brainstorm_card = context.brainstorm_card or card
-			if context.brainstorm_card == card then
-				local other_joker = nil
-				for i = 1, #G.jokers.cards do
-					if G.jokers.cards[i] == card then
-						other_joker = G.jokers.cards[i + 1]
-						break
-					end
-				end
-				if other_joker and other_joker ~= card then
-					context.brainstorm_card = other_joker
-					if other_joker.calculate_joker then
-						local other_ret = other_joker:calculate_joker(context)
-						if other_ret then
-							table.insert(ret, other_ret)
-						end
-					end
+		-- Handle Brainstorm context (right Joker)
+		if context.brainstorm and context.brainstorm_card == card then
+			local other_joker = nil
+			for i = 1, #G.jokers.cards do
+				if G.jokers.cards[i] == card then
+					other_joker = G.jokers.cards[i + 1]
+					break
 				end
 			end
-		end
-
-		if #ret > 0 then
-			return ret
+			if other_joker and other_joker ~= card then
+				-- Chain to the copied Joker
+				context.brainstorm_card = other_joker
+				if other_joker.calculate_joker then
+					return other_joker:calculate_joker(context)
+				end
+			end
 		end
 	end,
 })
